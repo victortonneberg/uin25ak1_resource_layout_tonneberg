@@ -26,31 +26,52 @@ function displayResources(category) {
     mainElement.innerHTML = resourceHTML
 }
 
-//Hente alle knappene med klassen "subject".
-const buttons = document.querySelectorAll('.subject')
 
-//Setter første button (index = 0) som aktiv ved første lasting av siden:
-buttons[0].classList.add("active")
-// displayResources(buttons[0].innerHTML);
+function buttonClick(button, content) {
+    //Finner den nåværende aktive knappen ved å hente CSS klassen "active":
+    const activeButton = document.querySelector(".subject.active")
 
-//Legger til eventlistener på alle knappene:
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        //Henter klassen/klassene til button:
-        const activeButton = document.querySelector(".subject.active")
+    //Fjerner klassen "active" fra den nåværende aktive knappen:
+    if(activeButton) {
+        activeButton.classList.remove("active")
+    }
 
-        //hvis det er en aktiv button, fjern klassen "active":
-        if(activeButton) {
-            activeButton.classList.remove("active") 
-        }
+    //Legger til klassen "active" på den knappen som er klikket på:
+    button.classList.add("active")
 
-        //Legger til klassen "active" på den buttonen som er klikket på:
-        button.classList.add("active")
+    //Kaller funksjonen for å generere dynamisk innhold basert på hvilken knapp som blir klikket på:
+    displayResources(content)
+}
 
-        //Kaller funksjonen for å generere dynamisk innhold basert på hvilken button som blir klikket på:
-        displayResources(button.innerHTML)
-    }) 
-})
+
+
+
+
+// //Hente alle knappene med klassen "subject".
+// const buttons = document.querySelectorAll('.subject')
+
+// //Setter første button (index = 0) som aktiv ved første lasting av siden:
+// buttons[0].classList.add("active")
+// // displayResources(buttons[0].innerHTML);
+
+// //Legger til eventlistener på alle knappene:
+// buttons.forEach(button => {
+//     button.addEventListener("click", () => {
+//         //Henter klassen/klassene til button:
+//         const activeButton = document.querySelector(".subject.active")
+
+//         //hvis det er en aktiv button, fjern klassen "active":
+//         if(activeButton) {
+//             activeButton.classList.remove("active") 
+//         }
+
+//         //Legger til klassen "active" på den buttonen som er klikket på:
+//         button.classList.add("active")
+
+//         //Kaller funksjonen for å generere dynamisk innhold basert på hvilken button som blir klikket på:
+//         displayResources(button.innerHTML)
+//     }) 
+// })
 
 
 //Kaller funksjonen for generere dynamisk innhold
