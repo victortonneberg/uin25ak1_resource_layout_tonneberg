@@ -11,6 +11,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-size: 20px;
 }
 
 body {
@@ -27,12 +28,20 @@ header {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin: 0;
     padding: 0;
+
+    button {
+        flex: 1;
+        height: 90px;
+        width: 277px;
+        font-size: 20px;
+    }
 }
 .subject {
     background-color: var(--darkblue);
@@ -41,4 +50,40 @@ nav {
     border: none;
     cursor: pointer;
     font-weight: bolder;
+}
+
+.active {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
+
+main {
+
+
+    .resources {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-color: var(--white);
+        color: var(--darkblue);
+        width: calc(285px * 5);
+        margin: 0 auto;
+
+        h2{
+            margin: 0;
+            padding: 3rem;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            padding-left: 3rem;
+        }
+
+        ul{
+            padding-left: 5rem;
+            padding-bottom: 5rem;
+        }
+    }
+
+    
 }
