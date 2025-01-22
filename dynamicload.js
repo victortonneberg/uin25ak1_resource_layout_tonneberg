@@ -17,7 +17,7 @@ function displayResources(category) {
         <p>${resource.text}</p>
             <ul>
                 <!-Itererer gjennom sources for ressursen og lager en liste med lenker->
-                ${resource.sources.map(source => `<li><a href="${source.url}">${source.title}</a></li>`).join("")}
+                ${resource.sources.map(source => `<li><a href="${source.url}" target="_blank">${source.title}</a></li>`).join("")}
             </ul>
         </article>`
     )
