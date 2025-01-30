@@ -87,3 +87,42 @@ main {
 
     
 }
+
+/*Media Queries for telefon/mindre skjermer*/
+@media only screen and (max-width: 768px) {
+    header {
+        margin-top: 10px; 
+    }
+
+    nav {
+        flex-direction: column; 
+    }
+
+    nav button {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    main {
+
+        .resources {
+            width: 90%; 
+            margin: 0; 
+            padding: 1rem; 
+
+            h2 {
+                padding: 1rem;  
+            }
+
+            p {
+                padding-left: 1rem; 
+            }
+
+            ul {
+                padding-left: 2rem; 
+                margin-right: 2rem;
+                padding-bottom: 2rem; 
+            }
+        }
+    }
+}
