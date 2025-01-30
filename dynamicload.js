@@ -36,7 +36,7 @@ function buttonClick(button, content) {
     //Finner den nåværende aktive knappen ved å hente CSS klassen "active":
     const activeButton = document.querySelector(".subject.active")
 
-    //Fjerner klassen "active" fra den nåværende aktive knappen, hvis den finnes:
+    //Fjerner klassen "active" fra den nåværende aktive knappen, hvis den finnes. Det sørger for at det bare kan være 1 knapp om gangen med klassen "active":
     if(activeButton) {
         activeButton.classList.remove("active")
     }
