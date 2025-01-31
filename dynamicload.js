@@ -7,7 +7,7 @@ function displayResources(category) {
     //Sørger for at parameteren som sendes med ved kall av funksjonen er riktig:
     const resourcesFilter = resources.filter(resource => resource.category === category)
 
-    //Oppretter variabel som holder på en string, slik at den kan lagre der dynamisk genererte innholdet:
+    //Oppretter variabel som holder på en string, slik at den kan lagre det dynamisk genererte innholdet:
     let resourceHTML = ""
 
     //Bruker .map for å iterere gjennom de filtrerte ressuresene og generere HTML for hver ressurs:
